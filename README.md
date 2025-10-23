@@ -85,4 +85,4 @@ To compare two files directly from the command line:
 python main_cli.py path/to/your/file1.txt path/to/your/file2.txt
 ```
 ### 📝 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
