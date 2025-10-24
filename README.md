@@ -1,8 +1,11 @@
-# 📄 Plagiarism Checker Pro
+# 📄 Plagiarism Checker Pro 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://plagiarism-checker-pro.streamlit.app/) ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green)
 
-A sophisticated plagiarism detection tool that compares documents, calculates similarity scores, and generates detailed, sentence-level highlight reports. Built with **Python**, **Streamlit**, advanced **NLP techniques** including **Sentence-BERT embeddings**, this application provides both corpus-wide scanning via a high-performance, pre-indexed **SQLite database**, and **direct file-to-file comparison** for quick, focused analysis.[Open on Streamlit Cloud](https://plagiarism-checker-pro.streamlit.app/)
+A sophisticated plagiarism detection tool that compares documents, calculates similarity scores, and generates detailed, sentence-level highlight reports. Built with **Python**, **Streamlit**, advanced **NLP techniques** including **Sentence-BERT embeddings**, this application provides both corpus-wide scanning via a high-performance, pre-indexed **SQLite database**, and **direct file-to-file comparison** for quick, focused analysis.
 
 [![Open the plagiarism tool](assets/plagiarism-checker-pro.png)](https://plagiarism-checker-pro.streamlit.app/)
+
+
 
 ## ✨ Features
 
