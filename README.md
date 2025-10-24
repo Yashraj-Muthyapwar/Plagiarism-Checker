@@ -1,8 +1,8 @@
 # 📄 Plagiarism Checker Pro
 
-A sophisticated plagiarism detection tool that compares documents, calculates similarity scores, and generates detailed, highlighted reports. Built with Python, Streamlit, and Scikit-learn, this application features a high-performance, database-backed engine for checking against a large corpus of documents.
+A sophisticated plagiarism detection tool that compares documents, calculates similarity scores, and generates detailed, sentence-level highlight reports. Built with **Python**, **Streamlit**, advanced **NLP techniques** including **Sentence-BERT embeddings**, this application provides both corpus-wide scanning via a high-performance, pre-indexed **SQLite database**, and **direct file-to-file comparison** for quick, focused analysis.[Open on Streamlit Cloud](https://plagiarism-checker-pro.streamlit.app/)
 
-![Plagiarism Checker Pro Screenshot](<!-- LINK TO YOUR SCREENSHOT/GIF HERE -->)
+[![Open the plagiarism tool](assets/plagiarism-checker-pro.png)](https://plagiarism-checker-pro.streamlit.app/)
 
 ## ✨ Features
 
@@ -11,8 +11,8 @@ A sophisticated plagiarism detection tool that compares documents, calculates si
     -   **Compare Against Corpus**: Check a document against a large, pre-indexed database of other documents.
 -   **Detailed Plagiarism Highlighting**: Generates a sentence-by-sentence analysis and visually highlights matching sentences in the suspect document.
 -   **High-Performance Engine**:
-    -   Uses a pre-indexed SQLite database to store document vectors, making corpus checks incredibly fast.
-    -   The fitted TF-IDF vectorizer is saved with `joblib`, eliminating the need for re-training on app startup.
+    -   Uses a pre-indexed SQLite database to pre-computed SBERT embeddings, making corpus checks incredibly fast.
+    -   Implements cosine similarity on normalized embeddings for accurate results
     -   Leverages Streamlit's caching (`@st.cache_resource` and `@st.cache_data`) for a responsive and fluid user experience.
 -   **Dual Interfaces**:
     -   **Web Application**: A user-friendly interface built with Streamlit.
@@ -23,11 +23,12 @@ A sophisticated plagiarism detection tool that compares documents, calculates si
 
 -   **Language**: Python 3.9+
 -   **Web Framework**: Streamlit
--   **Machine Learning**: Scikit-learn (for TF-IDF and Cosine Similarity)
--   **NLP**: NLTK (for tokenization, stopwords, and lemmatization)
+-   **Semantic Embeddings**: Sentence-BERT (all-MiniLM-L6-v2)
+-   **Machine Learning**: Scikit-learn, PyTorch, Transformers
+-   **NLP**: NLTK (for tokenization, stopwords, and lemmatization), Sentence-Transformers
 -   **Database**: SQLite3
--   **File Handling**: `python-docx`, `PyPDF2`
--   **Model/Data Persistence**: `joblib`, `pickle`
+-   **File Handling**: `python-docx`, `PyMuPDF`, `pdfplumber`, `PyPDF2`
+
 
 ## ⚙️ Setup and Installation
 
@@ -36,7 +37,7 @@ Follow these steps to set up the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/plagiarism-checker.git
+git clone https://github.com/Yashraj-Muthyapwar/Plagiarism-Checker.git
 cd plagiarism-checker
 ```
 ### 2. Create and Activate a Virtual Environment
@@ -58,13 +59,13 @@ pip install -r requirements.txt
 ```
 
 ### 4. Download NLTK Data
-
+Run the setup script to download required NLTK packages:
 ```
-python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('wordnet')"
+python download_nltk.py
 ```
 
 ### 5. Build the Corpus Database and Model
-
+Add your documents to the `data/corpus_files/` directory and run:
 ```
 python ingest.py
 ```
