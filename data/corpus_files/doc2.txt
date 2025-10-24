@@ -1,0 +1,1 @@
+This second document discusses programming in Python with a focus on functions, modules, and packaging best practices for maintainable code.

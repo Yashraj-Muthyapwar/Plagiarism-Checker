@@ -1,0 +1,1 @@
+Machine learning basics include supervised and unsupervised learning, model training, validation, and metrics like accuracy, precision, recall, and F1-score.

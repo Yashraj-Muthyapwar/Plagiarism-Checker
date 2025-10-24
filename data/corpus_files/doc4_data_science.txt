@@ -1,0 +1,1 @@
+Data science with Python involves libraries such as NumPy, pandas, and scikit-learn. Typical workflows include data cleaning, feature engineering, modeling, and evaluation.

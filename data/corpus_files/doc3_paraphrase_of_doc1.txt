@@ -1,0 +1,1 @@
+This document also talks about Python. It covers beginner topics such as variables, simple syntax rules, and common structures like if-statements and for-loops.
