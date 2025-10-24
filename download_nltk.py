@@ -9,7 +9,7 @@ def download_nltk_data():
     Downloads the NLTK data packages required for the plagiarism checker project.
     Includes a workaround for SSL certificate verification issues on some systems.
     """
-    packages = ['punkt', 'stopwords', 'wordnet']
+    packages = ['punkt', 'punkt_tab', 'stopwords', 'wordnet', 'omw-1.4']
     
     print("Starting download of NLTK data packages...")
     
