@@ -3,6 +3,8 @@
 Main Streamlit Web Application for the Plagiarism Checker.
 Enhanced minimalistic UI with better visual hierarchy.
 """
+import download_nltk
+download_nltk.download_nltk_data()
 
 import streamlit as st
 from sklearn.metrics.pairwise import cosine_similarity
