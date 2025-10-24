@@ -3,9 +3,6 @@
 Main Streamlit Web Application for the Plagiarism Checker.
 Enhanced minimalistic UI with better visual hierarchy.
 """
-# Add the project root to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 # Download NLTK data FIRST
 from download_nltk import download_nltk_data
 download_nltk_data()
