@@ -90,3 +90,5 @@ python main_cli.py path/to/your/file1.txt path/to/your/file2.txt
 ```
 ### 📝 License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.txt) file for more details.
+
+Open source with purpose built with ❤️ to make originality effortless.
